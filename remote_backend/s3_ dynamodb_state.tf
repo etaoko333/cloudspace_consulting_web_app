@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "cloudspace-consulting-state-bucket-st"
+  bucket = "cloud-computing-webserver"
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
@@ -14,7 +14,7 @@ resource "aws_s3_bucket_versioning" "versioning" {
 }
 
 resource "aws_dynamodb_table" "terraform_state_lock" {
-  name           = "cloudspace-consulting-lock-table-st"
+  name           = "cloud-computing-webserver"
   hash_key       = "LockID"
   read_capacity  = 20
   write_capacity = 20
